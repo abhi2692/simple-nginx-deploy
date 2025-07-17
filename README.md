@@ -9,6 +9,19 @@ This is a beginner-friendly DevOps project that deploys a static HTML page to an
 - ✅ Serves a simple HTML homepage
 - ✅ Uses GitHub Actions to deploy via SSH
 
+## 🏗️ EC2 Infrastructure
+
+This project assumes an EC2 instance is already created. You can:
+
+- ✅ Manually create an EC2 instance (Amazon Linux 2, with public IP)
+- 🔧 Or provision infrastructure using Terraform from this repo: [terraform-aws-infra](https://github.com/abhi2692/terraform-aws-infra.git)
+
+Make sure you:
+
+- Allow inbound HTTP (port 80) and SSH (port 22)
+- Upload the public key of your SSH keypair to EC2
+- Store the private key in your GitHub repo secrets
+
 ## 🗂️ Folder Structure
 
 ```
