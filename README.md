@@ -13,12 +13,12 @@ This is a beginner-friendly DevOps project that deploys a static HTML page to an
 
 simple-nginx-deploy/
 ├── .github/
-│ └── workflows/
-│ └── deploy.yml # GitHub Actions workflow
+│   └── workflows/
+│       └── deploy.yml         # GitHub Actions workflow
 ├── scripts/
-│ └── deploy.sh # Script to SSH and configure EC2 instance
+│   └── deploy.sh              # Script to SSH and configure EC2 instance
 ├── app/
-│ └── index.html # HTML page served by Nginx
+│   └── index.html             # HTML page served by Nginx
 └── README.md
 
 
