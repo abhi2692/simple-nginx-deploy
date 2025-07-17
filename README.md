@@ -11,6 +11,7 @@ This is a beginner-friendly DevOps project that deploys a static HTML page to an
 
 ## 🗂️ Folder Structure
 
+```
 simple-nginx-deploy/
 ├── .github/
 │   └── workflows/
@@ -20,6 +21,7 @@ simple-nginx-deploy/
 ├── app/
 │   └── index.html             # HTML page served by Nginx
 └── README.md
+```
 
 
 ## ⚙️ How It Works
