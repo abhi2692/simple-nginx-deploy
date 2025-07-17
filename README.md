@@ -1,1 +1,58 @@
-# sample-app-deploy
+# 🧰 Simple Nginx Web App Deployment on EC2 using GitHub Actions
+
+This is a beginner-friendly DevOps project that deploys a static HTML page to an Nginx web server on an AWS EC2 instance using GitHub Actions.
+
+## 🚀 Project Overview
+
+- ✅ Launches an EC2 instance using Terraform
+- ✅ Installs Nginx on Amazon Linux 2
+- ✅ Serves a simple HTML homepage
+- ✅ Uses GitHub Actions to deploy via SSH
+
+## 🗂️ Folder Structure
+
+simple-nginx-deploy/
+├── .github/
+│ └── workflows/
+│ └── deploy.yml # GitHub Actions workflow
+├── scripts/
+│ └── deploy.sh # Script to SSH and configure EC2 instance
+├── app/
+│ └── index.html # HTML page served by Nginx
+└── README.md
+
+
+## ⚙️ How It Works
+
+1. Terraform launches an EC2 instance (not included in this repo).
+2. HTML file is pushed to GitHub.
+3. GitHub Actions triggers `deploy.yml`.
+4. `deploy.sh` connects to EC2 via SSH and:
+   - Installs Nginx
+   - Sets up the homepage
+   - Starts the service
+
+## 🔐 Secrets Required in GitHub
+
+Set the following GitHub Secrets:
+
+- `EC2_SSH_KEY` – Your EC2 private key (in OpenSSH format)
+- `EC2_HOST` – Public IP of your EC2 instance
+- `EC2_USER` – SSH user, usually `ec2-user` for Amazon Linux 2
+
+## 🏁 To Deploy
+
+Push to the `main` branch. GitHub Actions will do the rest.
+
+## 📦 Tech Stack
+
+- AWS EC2 (Amazon Linux 2)
+- Nginx
+- GitHub Actions
+- Bash
+
+## 🏷️ Project Tag
+
+> ✅ Level: Beginner  
+> 🔧 Focus: SSH + EC2 + GitHub Actions  
+> 🧱 Category: Cloud Basics
