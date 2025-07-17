@@ -24,3 +24,4 @@ jobs:
           ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa ec2-user@${{ secrets.EC2_HOST }} '
             sudo mv /tmp/index.html /usr/share/nginx/html/index.html &&
             sudo systemctl restart nginx
+            '
