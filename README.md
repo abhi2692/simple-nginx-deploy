@@ -1,4 +1,4 @@
-# 🧰 Simple Nginx Web App Deployment on EC2 using GitHub Actions
+# 🧰 Simple Nginx Web App Deployment on AWS EC2 using GitHub Actions
 
 This is a beginner-friendly DevOps project that deploys a static HTML page to an Nginx web server on an AWS EC2 instance using GitHub Actions.
 
