@@ -1,5 +1,15 @@
 # 🧰 Simple Nginx Web App Deployment on AWS EC2 using GitHub Actions
 
+## ⚠️ Prerequisites
+
+Before running this CI/CD pipeline, you must:
+
+- **Enable EC2 in your main infrastructure repo** ([terraform-aws-infra](https://github.com/abhi2692/terraform-aws-infra.git)) by setting `enable_ec2 = true` in `environments/dev/variables.tf` and applying the changes with Terraform. This will provision the required EC2 instance for your app.
+- Wait for the EC2 instance to be created and ensure it is reachable (public IP, SSH and HTTP open).
+- Make sure you have the correct SSH keypair configured in both your infra and this repo's GitHub secrets.
+
+If EC2 is not enabled and provisioned, this deployment will fail because there will be no target instance for Nginx.
+
 This is a beginner-friendly DevOps project that deploys a static HTML page to an Nginx web server on an AWS EC2 instance using GitHub Actions.
 
 ## 🚀 Project Overview
