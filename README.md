@@ -21,16 +21,13 @@ This is a beginner-friendly DevOps project that deploys a static HTML page to an
 
 ## 🏗️ EC2 Infrastructure
 
-This project assumes an EC2 instance is already created. You can:
+This project requires an EC2 instance provisioned via the [terraform-aws-infra](https://github.com/abhi2692/terraform-aws-infra.git) repository. Do not create the EC2 instance manually.
 
-- ✅ Manually create an EC2 instance (Amazon Linux 2, with public IP)
-- 🔧 Or provision infrastructure using Terraform from this repo: [terraform-aws-infra](https://github.com/abhi2692/terraform-aws-infra.git)
-
-Make sure you:
-
-- Allow inbound HTTP (port 80) and SSH (port 22)
-- Upload the public key of your SSH keypair to EC2
-- Store the private key in your GitHub repo secrets
+**Steps:**
+- In your infra repo, set `enable_ec2 = true` in `environments/dev/variables.tf` and apply the changes with Terraform.
+- Ensure the EC2 instance is created with a public IP, and that inbound HTTP (port 80) and SSH (port 22) are allowed.
+- Upload your SSH public key via the infra repo (see its README for details).
+- Store the matching private key in this repo's GitHub secrets as `EC2_SSH_KEY`.
 
 ## 🗂️ Folder Structure
 
